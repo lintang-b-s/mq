@@ -1,0 +1,18 @@
+{
+    "name": "lintang/php-rabbitmq",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Lintang\\PhpRabbitmq\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "lintang-b-s",
+            "email": "lintangbirdasaputra23@gmail.com"
+        }
+    ],
+    "require": {
+        "php-amqplib/php-amqplib": "^3.6"
+    }
+}
