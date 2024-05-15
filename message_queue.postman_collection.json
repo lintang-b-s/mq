@@ -1,0 +1,133 @@
+{
+	"info": {
+		"_postman_id": "c173aaf4-de94-4ae7-b7f5-ec12ad34eb77",
+		"name": "message_queue",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30538133",
+		"_collection_link": "https://orange-comet-51695.postman.co/workspace/netflik~35c0e208-27dd-4c2a-a67f-44e4ee221c8b/collection/30538133-c173aaf4-de94-4ae7-b7f5-ec12ad34eb77?action=share&source=collection_link&creator=30538133"
+	},
+	"item": [
+		{
+			"name": "php",
+			"item": [
+				{
+					"name": "produce",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"message\": \"hello!! from rabbtimq php producer!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/notifications",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"notifications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/receive",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"receive"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "golang",
+			"item": [
+				{
+					"name": "produce",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"message\": \"helllo oti backend!!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8998/api/v1/rabbitmq",
+							"host": [
+								"localhost"
+							],
+							"port": "8998",
+							"path": [
+								"api",
+								"v1",
+								"rabbitmq"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "kafka",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"message\": \"hello from kafka producer!! 55\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8998/api/v1/kafka",
+							"host": [
+								"localhost"
+							],
+							"port": "8998",
+							"path": [
+								"api",
+								"v1",
+								"kafka"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
